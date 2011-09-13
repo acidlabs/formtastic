@@ -270,7 +270,7 @@ module Formtastic
 
         accesskey = (options.delete(:accesskey) || default_commit_button_accesskey) unless button_html.has_key?(:accesskey)
         button_html = button_html.merge(:accesskey => accesskey) if accesskey
-        template.content_tag(:li, Formtastic::Util.html_safe(submit(text, button_html)), wrapper_html)
+        template.content_tag(:div, Formtastic::Util.html_safe(submit(text, button_html)), wrapper_html)
       end
     end
   end
